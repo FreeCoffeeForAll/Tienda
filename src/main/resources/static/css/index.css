@@ -1,0 +1,26 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 1 jun. 2022, 23:26:34
+    Author     : XLight
+*/
+
+/*
+content-box: toma en cuenta, contenido, borde y padding para el calculo de la caja
+border-box: modifica valores de contenido, para que coincida con nuestro con nuestro ancho y alto
+*/
+
+.block{
+    background-color: purple;
+    width: 200px;
+    height: 200px;
+    padding: 50px;
+    
+    border-color: 81C2FF;
+    border: 5px solid;
+    box-sizing: border-box;
+    margin: auto;
+    }
+
