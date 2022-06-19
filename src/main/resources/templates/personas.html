@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    
+
     <head>
         <title>Persona</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     </head>
-    
+
     <body>
-    <h1 th:text="${titulo}"></h1>
-    <table class="table table-dark table-striped">
-            
-            <thead class="thead-dark">
+        <h1 th:text="${titulo}"></h1>
+        <table class="table table-striped table-hover">
+
+            <thead class="table-striped">
                 <tr>
                     <th scope="col">Nombre </th>
                     <th scope="col">Apellido 1 </th>
                     <th scope="col">Apellido 2 </th>
-                    <th scope="col">Email </th>
                     <th scope="col">Telefono </th>
+                    <th scope="col">Email </th>                    
                     <th scope="col">Pais </th>
                     <th scope="col">Editar </th>
                     <th scope="col">Eliminar </th>
@@ -27,8 +31,8 @@
                     <td th:text="${user.getNombre}"></td>
                     <td th:text="${user.getApellido1}"></td>
                     <td th:text="${user.getApellido2}"></td>
+                    <td th:text="${user.getTelefono}"></td>                    
                     <td th:text="${user.getEmail}"></td>
-                    <td th:text="${user.getTelefono}"></td>
                     <td th:text="${user.getPais.getPais}"></td>
                     <td>
                         <a th:href="@{/editPersona/{id}(id=${user.getId})}">Edit</a>
@@ -38,7 +42,7 @@
                     </td>
                 </tr>
             </th:block>
-    </tbody>
+        </tbody>
     </table>
-    </body>
+</body>
 </html>
